@@ -164,3 +164,7 @@ function decrypt(code)
     }
     return str; //return str
 }
+/*
+Compressing encrypt and decrypt functions into a single line of code (pseudocode not exact)
+console.log(phrase.toUpperCase().split("").map(element => {return MorseCode[element] ? MorseCode[element] : element;}).join(" "));
+*/
