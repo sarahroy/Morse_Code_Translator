@@ -146,7 +146,7 @@ function encrypt(phrase)
 
 function decrypt(code)
 {//O(n)
-    //converting the phrase to Upper Case and splitting the phrase into an array of strings (chars)
+    //splitting the phrase into an array of strings (chars)
     var morse = code.split(" "); 
     var str = ""; //translated phrase to be returned
     
