@@ -4,26 +4,26 @@
 //InternationalMorseCode.png source: https://scoutlife.org/hobbies-projects/funstuff/575/morse-code-translator/
 //References: https://www.tutorialspoint.com/converting-string-to-morse-code-in-javascript 
 
-import promptSync from 'prompt-sync';
-import { decrypt } from './decrypt.js';
-import { encrypt } from './encrypt.js';
+import promptSync from 'prompt-sync'; //importing the synthetic default from prompt-sync
+import { decrypt } from './decrypt.js'; //importing decrypt function
+import { encrypt } from './encrypt.js'; //importing encrypt function
 const prompt = promptSync();
 
-console.log("Enter 0 to encrypt English phrases into Morse Code");
-console.log("Enter 1 to decrypt Morse Code into English");
+console.log("Enter 0 to encrypt English phrases => Morse Code");
+console.log("Enter 1 to decrypt Morse Code => English");
 var choice = parseInt(prompt("Enter you choice: "));//take user input as int
 
 if(choice == 0) // English -> Morse Code
 {
     console.log("English -> Morse Code");
-    var phrase = prompt("Enter English phrase to be encrypted: ");
-    console.log(encrypt(phrase));
+    var phrase = prompt("Enter English phrase to be encrypted: "); //prompting user to input phrase
+    console.log(encrypt(phrase)); //passing user inputted string to encrypt function
 }
 else if(choice == 1) // Morse Code -> English
 {
     console.log("Morse Code -> English");
-    var code = prompt("Enter Morse Code to be decrypted: ");
-    console.log(decrypt(code));
+    var code = prompt("Enter Morse Code to be decrypted: "); //prompting user to input morse code
+    console.log(decrypt(code)); //passing user inputted string to decrypt function
 }
 else //user input was neither 0 nor 1
 {
