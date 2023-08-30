@@ -4,106 +4,14 @@
 //InternationalMorseCode.png source: https://scoutlife.org/hobbies-projects/funstuff/575/morse-code-translator/
 //References: https://www.tutorialspoint.com/converting-string-to-morse-code-in-javascript 
 
-const prompt = require("prompt-sync")();
-const MorseCode = {
-    'A': ".-",
-    'B': "-...",
-    'C': "-.-.",
-    'D': "-..",
-    'E': ".",
-    'F': "..-.",
-    'G': "--.",
-    'H': "....",
-    'I': "..",
-    'J': ".---",
-    'K': "-.-",
-    'L': ".-..",
-    'M': "--",
-    'N': "-.",
-    'O': "---",
-    'P': ".--.",
-    'Q': "--.-",
-    'R': ".-.",
-    'S': "...",
-    'T': "-",
-    'U': "..-",
-    'V': "...-",
-    'W': ".--",
-    'X': "-..-",
-    'Y': "-.--",
-    'Z': "--..",
-    '1': ".----",
-    '2': "..---",
-    '3': "...--",
-    '4': "....-",
-    '5': ".....",
-    '6': "-....",
-    '7': "--...",
-    '8': "---..",
-    '9': "----.",
-    '0': "-----",
-    '?': "..--..", //question mark
-    '!': "-.-.--", //exclaimation point
-    '.': ".-.-.-", //period or full stop
-    ',': "--..--", //comma
-    ';': "-.-.-.", //semicolon
-    ':': "---...", //colon 
-    '+': ".-.-.",  //plus sign
-    '-': "-....-", //minus or "dash"
-    '/': "-..-.",  //division or "OR"
-    '=': "-...-",  //equal to
-}
-const English = {
-    '.-'    : "A",
-    '-...'  : "B",
-    '-.-.'  : "C",
-    '-..'   : "D",
-    '.'     : "E",
-    '..-.'  : "F",
-    '--.'   : "G",
-    '....'  : "H",
-    '..'    : "I",
-    '.---'  : "J",
-    '-.-'   : "K",
-    '.-..'  : "L",
-    '--'    : "M",
-    '-.'    : "N",
-    '---'   : "O",
-    '.--.'  : "P",
-    '--.-'  : "Q",
-    '.-.'   : "R",
-    '...'   : "S",
-    '-'     : "T",
-    '..-'   : "U",
-    '...-'  : "V",
-    '.--'   : "W",
-    '-..-'  : "X",
-    '-.--'  : "Y",
-    '--..'  : "Z",
-    '.----' : "1",
-    '..---' : "2",
-    '...--' : "3",
-    '....-' : "4",
-    '.....' : "5",
-    '-....' : "6",
-    '--...' : "7",
-    '---..' : "8",
-    '----.' : "9",
-    '-----' : "0",
-    '..--..': "?", //question mark
-    '-.-.--': "!", //exclaimation point
-    '.-.-.-': ".", //period or full stop
-    '--..--': ",", //comma
-    '-.-.-.': ";", //semicolon
-    '---...': ":", //colon
-    '.-.-.' : "+", //plus sign
-    '-....-': "-", //minus or "dash"
-    '-..-.' : "/", //division or "OR"
-    '-...-' : "=", //equal sign
-}
+import promptSync from 'prompt-sync';
+import { decrypt } from './decrypt.js';
+import { encrypt } from './encrypt.js';
+const prompt = promptSync();
+
 console.log("Enter 0 to encrypt English phrases into Morse Code");
 console.log("Enter 1 to decrypt Morse Code into English");
-var choice = parseInt(prompt("Enter you choice: "));
+var choice = parseInt(prompt("Enter you choice: "));//take user input as int
 
 if(choice == 0) // English -> Morse Code
 {
@@ -122,48 +30,6 @@ else //user input was neither 0 nor 1
     console.log("Invalid choice");
 }
 
-function encrypt(phrase)
-{ //O(n)
-   
-    //converting the phrase to Upper Case and splitting the phrase into an array of strings (chars)
-    var chars = phrase.toUpperCase().split("");
-    var morse = ""; //morse code to be returned
-
-    //for-loop to traverse array of string (chars)
-    for(let i=0;i<chars.length;i++)
-    {
-        if (MorseCode[chars[i]]) //check if morse code for each char exists
-        {
-            morse = morse.concat(MorseCode[chars[i]]," "); //concatenate morse code 
-        }
-        else //morse code for char doesn't exist
-        {
-            morse = morse.concat(chars[i]," "); //concatenate with the char
-        }
-    }
-    return morse; //return morse
-}
-
-function decrypt(code)
-{//O(n)
-    //splitting the phrase into an array of strings (chars)
-    var morse = code.split(" "); 
-    var str = ""; //translated phrase to be returned
-    
-    //for-loop to traverse array of string (chars)
-    for(let j=0;j<morse.length;j++)
-    {
-        if (English[morse[j]]) //check if morse code for each char exists
-        {
-            str = str.concat(English[morse[j]]," "); //concatenate morse code 
-        }
-        else //English translation for char doesn't exist
-        {
-            str = str.concat(morse[j]," "); //concatenate with the char
-        }
-    }
-    return str; //return str
-}
 /*
 Compressing encrypt and decrypt functions into a single line of code (pseudocode not exact)
 console.log(phrase.toUpperCase().split("").map(element => {return MorseCode[element] ? MorseCode[element] : element;}).join(" "));
