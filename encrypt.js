@@ -15,7 +15,7 @@ export function encrypt(phrase)
         }
         else //morse code for char doesn't exist
         {
-            morse = morse.concat(chars[i]," "); //concatenate with the char
+            morse = morse.concat(chars[i],"/ "); //concatenate with the char
         }
     }
     return morse; //return morse
