@@ -1,8 +1,7 @@
 //Author: Sarah Ann Roy
 //Project Name: MorseCodeTranslator
 //Project Description: A program written in JavaScript to be able to encrypt English phrases into Morse Code and decrypt Morse Code into English.
-//InternationalMorseCode.png source: https://scoutlife.org/hobbies-projects/funstuff/575/morse-code-translator/
-//References: https://www.tutorialspoint.com/converting-string-to-morse-code-in-javascript 
+//InternationalMorseCode.png source: https://scoutlife.org/hobbies-projects/funstuff/575/morse-code-translator/ 
 
 import promptSync from 'prompt-sync'; //importing the synthetic default from prompt-sync
 import { decrypt } from './decrypt.js'; //importing decrypt function
@@ -29,8 +28,3 @@ else //user input was neither 0 nor 1
 {
     console.log("Invalid choice");
 }
-
-/*
-Compressing encrypt and decrypt functions into a single line of code (pseudocode)
-console.log(phrase.toUpperCase().split("").map(element => {return MorseCode[element] ? MorseCode[element] : element;}).join(" "));
-*/
