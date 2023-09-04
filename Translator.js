@@ -17,13 +17,13 @@ if(choice == 0) // English -> Morse Code
 {
     console.log("English -> Morse Code");
     var phrase = prompt("Enter English phrase to be encrypted: "); //prompting user to input phrase
-    console.log(encrypt(phrase)); //passing user inputted string to encrypt function
+    console.log("Morse Code: "+encrypt(phrase)); //passing user inputted string to encrypt function
 }
 else if(choice == 1) // Morse Code -> English
 {
     console.log("Morse Code -> English");
     var code = prompt("Enter Morse Code to be decrypted: "); //prompting user to input morse code
-    console.log(decrypt(code)); //passing user inputted string to decrypt function
+    console.log("Translated Message: "+decrypt(code)); //passing user inputted string to decrypt function
 }
 else //user input was neither 0 nor 1
 {
@@ -31,6 +31,6 @@ else //user input was neither 0 nor 1
 }
 
 /*
-Compressing encrypt and decrypt functions into a single line of code (pseudocode not exact)
+Compressing encrypt and decrypt functions into a single line of code (pseudocode)
 console.log(phrase.toUpperCase().split("").map(element => {return MorseCode[element] ? MorseCode[element] : element;}).join(" "));
 */
