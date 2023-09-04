@@ -1,5 +1,5 @@
 import { English } from './english.js';
-export function decrypt(code)
+export function decode(code)
 {//O(n)
     //splitting the phrase into an array of strings (chars)
     var morse = code.split(" "); 

@@ -1,5 +1,5 @@
 import { MorseCode } from './morse.js';
-export function encrypt(phrase)
+export function encode(phrase)
 { //O(n)
    
     //converting the phrase to Upper Case and splitting the phrase into an array of strings (chars)
