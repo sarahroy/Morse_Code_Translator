@@ -22,7 +22,7 @@ else if(choice == 1) // Morse Code -> English
 {
     console.log("Morse Code -> English");
     var code = prompt("Enter Morse Code to be decoded: "); //prompting user to input morse code
-    console.log("Translated Message: "+decode(code)); //passing user inputted string to decode function
+    console.log("Translation: "+decode(code)); //passing user inputted string to decode function
 }
 else //user input was neither 0 nor 1
 {
