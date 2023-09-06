@@ -16,13 +16,13 @@ if(choice == 0) // English -> Morse Code
 {
     console.log("English -> Morse Code");
     var phrase = prompt("Enter English phrase to be encoded: "); //prompting user to input phrase
-    console.log("Morse Code: "+encode(phrase)); //passing user inputted string to encode function
+    console.log("Morse Code:  "+encode(phrase)); //passing user inputted string to encode function
 }
 else if(choice == 1) // Morse Code -> English
 {
     console.log("Morse Code -> English");
     var code = prompt("Enter Morse Code to be decoded: "); //prompting user to input morse code
-    console.log("Translation: "+decode(code)); //passing user inputted string to decode function
+    console.log("Translation:  "+decode(code)); //passing user inputted string to decode function
 }
 else //user input was neither 0 nor 1
 {
