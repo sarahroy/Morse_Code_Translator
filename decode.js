@@ -15,6 +15,7 @@ export function decode(code)
         else //English translation for char doesn't exist
         {
             str = str.concat(morse[j]," "); //concatenate with the char
+            str = str.replace("/","") //removes the slash from the string (if it exists)
         }
     }
     return str; //return str
