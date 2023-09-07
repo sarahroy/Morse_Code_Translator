@@ -1,4 +1,4 @@
-import { English } from './english.js';
+import { Latin } from './latin.js';
 export function decode(code)
 {//O(n)
     //splitting the phrase into an array of strings (chars)
@@ -8,11 +8,11 @@ export function decode(code)
     //for-loop to traverse array of string (chars)
     for(let j=0;j<morse.length;j++)
     {
-        if (English[morse[j]]) //check if morse code for each char exists
+        if (Latin[morse[j]]) //check if morse code for each char exists
         {
-            str = str.concat(English[morse[j]],""); //concatenate morse code 
+            str = str.concat(Latin[morse[j]],""); //concatenate morse code 
         }
-        else //English translation for char doesn't exist
+        else //Latin alphabet translation for char doesn't exist
         {
             str = str.concat(morse[j]," "); //concatenate with the char
             str = str.replace("/","") //removes the slash from the string (if it exists)

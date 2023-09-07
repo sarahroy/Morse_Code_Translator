@@ -1,4 +1,4 @@
-export const MorseCode = {
+export const Morse = {
     'A': ".-",
     'B': "-...",
     'C': "-.-.",

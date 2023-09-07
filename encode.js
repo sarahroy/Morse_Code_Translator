@@ -1,4 +1,4 @@
-import { MorseCode } from './morse.js';
+import { Morse } from './morse.js';
 export function encode(phrase)
 { //O(n)
    
@@ -9,9 +9,9 @@ export function encode(phrase)
     //for-loop to traverse array of string (chars)
     for(let i=0;i<chars.length;i++)
     {
-        if (MorseCode[chars[i]]) //check if morse code for each char exists
+        if (Morse[chars[i]]) //check if morse code for each char exists
         {
-            morse = morse.concat(MorseCode[chars[i]]," "); //concatenate morse code 
+            morse = morse.concat(Morse[chars[i]]," "); //concatenate morse code 
         }
         else //morse code for char doesn't exist
         {
