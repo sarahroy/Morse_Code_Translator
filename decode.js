@@ -1,3 +1,11 @@
+/**
+* * Function Name: decode
+* * Description: Using Latin, decode takes a user inputted Morse code string and splits it 
+* *              to map and match each morse code to its equivalent Latin alphabet.
+* @param code: user inputed Morse Code is passed to the function to be decoded
+* @returns str: decoded English phrase is returned
+* TODO: Implement text-to-speech using Web Speech API in web app
+**/
 import { Latin } from './latin.js';
 export function decode(code)
 {//O(n)
