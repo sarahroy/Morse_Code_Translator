@@ -1,0 +1,54 @@
+<!--
+    Project Name: MorseCodeTranslator
+    Description: A web application written in HTML, CSS & JavaScript to be able to 
+                encode Latin alphabet into Morse Code and 
+                decode Morse Code into its Latin alphabet equivalent.
+    References: https://scoutlife.org/hobbies-projects/funstuff/575/morse-code-translator/ 
+                https://www.w3schools.com/howto/howto_js_copy_clipboard.asp 
+    Author: Sarah Ann Roy
+    TODO: Get all buttons working following Figma designs
+    TODO: Implement JS code into web app
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Translator</title>
+</head>
+<body>
+    <script src="./scripts/icon_functions.js"></script>
+    <script src="./scripts/index.js"></script>
+    
+    <nav class="top-bar">
+        <h1>Morse Code Translator</h1>
+        <div id="box">English</div>
+        <div id="d-arrow">&#8644;</div>
+        <div id="box">Morse Code</div>
+    </nav>       
+    <div class="input-english">
+        <br><label for="English Text">English (U.S.)</label><br>
+        <textarea id="english-text" name="english" rows="3" cols="80" placeholder="Enter text here..."></textarea><br> 
+        <img src="./images/copy-black.png" alt="copy-black" onclick="copy('english-text')" class="icon">
+        <img src="./images/paste-black.png" alt="paste-black" onclick="paste('english-text','english-paste')" id = "english-paste" class="icon">
+        <img src="./images/pause-black.png" alt="pause-black" id="pause-button" class="icon">
+        <button onclick="main(0)" id = "encode">Encode into Morse Code</button>
+    </div>
+    <br>
+    <hr>
+    <div class="input-morse"> 
+        <br><label for="Morse Code" id="l-blue-text">Morse Code</label><br>
+        <textarea id="morse-text" name="morse" rows="5" cols="20" placeholder="Enter Morse Code here..."></textarea><br><br>
+        <img src="./images/copy-cyan.png" alt="copy-cyan" onclick="copy('morse-text')" class="icon">
+        <img src="./images/paste-cyan.png" alt="paste-cyan" onclick="paste('morse-text','morse-paste')" id = "morse-paste" class="icon">
+        <img src="./images/glossary-cyan.png" alt="glossary-cyan" class="icon">
+        <img src="./images/pause-cyan.png" alt="pause-cyan" id="pause-button" class="icon">
+        <button onclick="main(1)" id = "decode">Translate into English</button>
+    </div>
+    <br><br>
+    <div class="bottom-part">
+        <h5>Copyright 2023 &copy; Sarah Ann Roy</h5>
+    </div>
+</body>
+</html>
