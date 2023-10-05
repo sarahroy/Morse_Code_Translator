@@ -3,8 +3,11 @@
 * * Description: A program written in JavaScript to be able to encode Latin alphabet into 
 * *              Morse Code and decode Morse Code into its Latin alphabet equivalent.
 * References: https://scoutlife.org/hobbies-projects/funstuff/575/morse-code-translator/ 
+            : https://alexanderell.is/posts/writing-morse-code-games/ 
 * * Author: Sarah Ann Roy
-* TODO: Implement code into web app using HTML, CSS, & JS
+* TODO: Clear text button
+* TODO: Glossary and history
+* TODO: Make web app prettier
 **/
 function main(choice){
     var eng = document.getElementById("english-text").value;
@@ -12,8 +15,6 @@ function main(choice){
     switch(choice){
         case 0: //english -> morse
         document.getElementById("morse-text").value = Encode(eng);
-        console.log("English: "+eng);
-        console.log("Morse: "+Encode(eng));
         break;
 
         case 1: //morse -> english
@@ -34,13 +35,13 @@ function Encode(phrase){ //english -> morse
     //for-loop to traverse array of string (chars)
     for(let i=0;i<chars.length;i++)
     {
-        if (Morse_Code[chars[i]]) //check if morse code for each character exists
+        if (Morse_Code_Map[chars[i]]) //check if morse code for each character exists
         {
-            morse = morse.concat(Morse_Code[chars[i]]," "); //concatenate morse code 
+            morse = morse.concat(Morse_Code_Map[chars[i]]," "); //concatenate morse code 
         }
         else //morse code for char doesn't exist
         {
-            morse = morse.concat(chars[i]," / "); //concatenate with the char
+            morse = morse.concat(chars[i],"/ "); //concatenate with the char
         }
     }
     return morse; //return morse code
@@ -66,7 +67,7 @@ function Decode(code){
     }
     return translation; //return str
 }
-const Morse_Code = {
+const Morse_Code_Map = {
     'A': ".-",
     'B': "-...",
     'C': "-.-.",

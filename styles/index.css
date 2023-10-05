@@ -1,3 +1,14 @@
+/**
+* * Project Name: MorseCodeTranslator
+* * Description: A program written in JavaScript to be able to encode Latin alphabet into 
+* *              Morse Code and decode Morse Code into its Latin alphabet equivalent.
+* References: https://scoutlife.org/hobbies-projects/funstuff/575/morse-code-translator/ 
+            : https://alexanderell.is/posts/writing-morse-code-games/ 
+* * Author: Sarah Ann Roy
+* TODO: Clear text button
+* TODO: Glossary and history
+* TODO: Make web app prettier
+**/
 *{
     margin: 0;
     padding: 0;
