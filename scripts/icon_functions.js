@@ -35,9 +35,10 @@ function paste(b,c) //works!
 }
 function clear(d,e) //DOES NOT WORK
 {
-    const text = document.getElementById(d);
+    const textarea = document.getElementById(d);
     const butn = document.getElementById(e);
     butn.addEventListener('click', function handleClick() {
         text.value = 'not working';
     });
+    document.getElementById(d).value = "";
 }

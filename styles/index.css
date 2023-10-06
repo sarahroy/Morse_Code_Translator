@@ -21,6 +21,10 @@ body {
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
+#app-title{
+    font-size: 50px;
+}
+
 .top-bar{
     justify-content: center;
     text-align: center;
@@ -56,12 +60,14 @@ label{
     color: #01b3ff83;
 }
 textarea#morse-text{
-    font-size: xxx-large;
+    font-size: xx-large;
 }
 textarea#english-text{
-    font-size: medium;
+    font-size: x-large;
 }
 textarea{
+    height: 150px;
+    width: 1000px;
     border: none;
     font-weight: bold;
     padding-left: 10px;
@@ -69,13 +75,9 @@ textarea{
 ::placeholder{
     font-size: medium;
 }
-#light-mode{
-    height: 30px;
-    width: 70px;
-}
 .icon{
-    height: 30px;
-    width: 30px;
+    height: 45px;
+    width: 45px;
     padding: 5px;
 }
 hr{
@@ -83,7 +85,4 @@ hr{
 }
 .bottom-part{
     text-align: center;
-}
-#pause-button{
-    float: right;
 }
