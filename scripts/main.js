@@ -1,10 +1,10 @@
 /**
-* * Author: Sarah Ann Roy
 * * Project Name: MorseCodeTranslator
 * * Description: A program written in JavaScript to be able to encode Latin alphabet into 
 * *              Morse Code and decode Morse Code into its Latin alphabet equivalent.
 * References: https://scoutlife.org/hobbies-projects/funstuff/575/morse-code-translator/ 
-* TODO: Implement code into web app using HTML, CSS, & JS.
+* * Author: Sarah Ann Roy
+* TODO: Implement code into web app using HTML, CSS, & JS
 **/
 import promptSync from 'prompt-sync'; //importing the synthetic default from prompt-sync
 import { decode } from './decode.js'; //importing decode function

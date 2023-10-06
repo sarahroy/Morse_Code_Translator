@@ -1,9 +1,10 @@
 /**
-* Function Name: encode
-* Description: Using Morse, encode takes a user inputted alphanumeric string and splits it 
-*              to map and match each character to its Morse Code equivalent.
+* * Function Name: encode
+* * Description: Using Morse, encode takes a user inputted alphanumeric string and splits it 
+* *              to map and match each character to its Morse Code equivalent.
 * @param phrase: user inputed alphanumeric phrase is passed to be encoded using Morse Code
 * @returns morse: encoded Morse Code is returned
+* * Author: Sarah Ann Roy
 * TODO: Implement morse code audio using Web Audio API in web app
 **/
 import { Morse } from './morse.js';

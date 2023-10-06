@@ -1,0 +1,52 @@
+<!--
+    Project Name: MorseCodeTranslator
+    Description: A web application written in HTML, CSS & JavaScript to be able to 
+                encode Latin alphabet into Morse Code and 
+                decode Morse Code into its Latin alphabet equivalent.
+    References: https://scoutlife.org/hobbies-projects/funstuff/575/morse-code-translator/ 
+                https://www.w3schools.com/howto/howto_js_copy_clipboard.asp 
+    Author: Sarah Ann Roy
+    TODO: Clear text button
+    TODO: Glossary and history
+    TODO: Make web app prettier
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Translator</title>
+    <link rel="icon" type="image/x-icon" href="./images/MCT-logo.png">
+</head>
+<body>
+    <script src="./scripts/icon_functions.js"></script>
+    <script src="./scripts/index.js"></script>
+    
+    <nav class="top-bar">
+        <h1 id="app-title">Morse Code Translator</h1>
+        <div id="box">English</div>
+        <div id="d-arrow">&#8644;</div>
+        <div id="box">Morse Code</div>
+    </nav>       
+    <div class="input-english">
+        <br><label for="English Text">English (U.S.)</label><br>
+        <textarea oninput="main(0)" id="english-text" name="english" placeholder="Enter text here..."></textarea><br> 
+        <img title = "Copy" src="./images/copy-black.png" alt="copy-black" onclick="copy('english-text')" class="icon">
+        <img title = "Paste" src="./images/paste-black.png" alt="paste-black" onclick="paste('english-text','english-paste')" id = "english-paste" class="icon">
+    </div>
+    <br>
+    <hr>
+    <div class="input-morse"> 
+        <br><label for="Morse Code" id="l-blue-text">Morse Code</label><br>
+        <textarea oninput="main(1)" id="morse-text" name="morse" placeholder="Enter Morse Code here..."></textarea><br><br>
+        <img title = "Copy" src="./images/copy-cyan.png" alt="copy-cyan" onclick="copy('morse-text')" class="icon">
+        <img title = "Paste" src="./images/paste-cyan.png" alt="paste-cyan" onclick="paste('morse-text','morse-paste')" id = "morse-paste" class="icon">
+        <img title = "Glossary" src="./images/glossary-cyan.png" alt="glossary-cyan" class="icon">
+    </div>
+    <br><br>
+    <div class="bottom-part">
+        <h5> &copy; Copyright, Sarah Ann Roy 2023</h5>
+    </div>
+</body>
+</html>

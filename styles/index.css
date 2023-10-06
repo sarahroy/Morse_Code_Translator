@@ -1,0 +1,88 @@
+/**
+* * Project Name: MorseCodeTranslator
+* * Description: A program written in JavaScript to be able to encode Latin alphabet into 
+* *              Morse Code and decode Morse Code into its Latin alphabet equivalent.
+* References: https://scoutlife.org/hobbies-projects/funstuff/575/morse-code-translator/ 
+            : https://alexanderell.is/posts/writing-morse-code-games/ 
+* * Author: Sarah Ann Roy
+* TODO: Clear text button
+* TODO: Glossary and history
+* TODO: Make web app prettier
+**/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+head{
+    padding: 0px;
+}
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#app-title{
+    font-size: 50px;
+}
+
+.top-bar{
+    justify-content: center;
+    text-align: center;
+    background-color: #429edfb2;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 20px;
+    overflow: hidden;
+}
+#d-arrow, #box{
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+}
+#box{
+    background-color: white;
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+}
+#d-arrow{
+    font-size: 30px;
+}
+
+label{
+    font-size: small;
+    padding-left: 10px;
+}
+#l-blue-text, #morse-text {
+    color: #01B3FF;
+}
+#morse-text::placeholder {
+    color: #01b3ff83;
+}
+textarea#morse-text{
+    font-size: xx-large;
+}
+textarea#english-text{
+    font-size: x-large;
+}
+textarea{
+    height: 150px;
+    width: 1000px;
+    border: none;
+    font-weight: bold;
+    padding-left: 10px;
+}
+::placeholder{
+    font-size: medium;
+}
+.icon{
+    height: 45px;
+    width: 45px;
+    padding: 5px;
+}
+hr{
+    border-top: 3px solid #01B3FF;
+}
+.bottom-part{
+    text-align: center;
+}
