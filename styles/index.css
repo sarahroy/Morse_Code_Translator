@@ -101,3 +101,8 @@ hr{
 .bottom-part{
     text-align: center;
 }
+.glossary-pic{
+    display: block;
+    margin: auto;
+    padding: 100px;
+}
