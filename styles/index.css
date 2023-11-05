@@ -25,33 +25,48 @@ body {
     font-size: 50px;
 }
 
-.top-bar{
-    justify-content: center;
-    text-align: center;
-    background-color: #429edfb2;
+.nav-bar{
+    background-color: #429edf94;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     padding: 20px;
     overflow: hidden;
+    margin: auto;
 }
-#d-arrow, #box{
-    display: inline-block;
-    padding: 5px;
-    text-align: center;
+#logo{
+    float: left;
+    height: 50px;
+    width: 70px;
 }
-#box{
-    background-color: white;
-    border-radius: 10px;
-    height: 30px;
-    width: 100px;
+#app-title{
+    float:left;
 }
-#d-arrow{
-    font-size: 30px;
+nav ul{
+    list-style-type: none;
 }
-
+nav ul li{
+    display: inline;
+    float: right;
+}
+nav ul li a{
+    display: block;
+    color: black;
+    font-size: 20px;
+    padding: 20px;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    background-color: #80ebff;
+}
+.active {
+    background-color: #c0f5ff;
+  }
 label{
     font-size: small;
     padding-left: 10px;
+}
+.input-english, .input-morse, .history-paragraphs{
+    padding-left: 20px;
 }
 #l-blue-text, #morse-text {
     color: #01B3FF;
@@ -66,7 +81,7 @@ textarea#english-text{
     font-size: x-large;
 }
 textarea{
-    height: 150px;
+    height: 200px;
     width: 1000px;
     border: none;
     font-weight: bold;
