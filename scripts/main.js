@@ -13,7 +13,7 @@ const prompt = promptSync();
 
 console.log("Enter 0 to encode Latin phrases => Morse Code");
 console.log("Enter 1 to decode Morse Code => Latin phrases");
-var choice = parseInt(prompt("Enter you choice: "));//take user input as int
+var choice = parseInt(prompt("Enter your choice: "));//take user input as int
 
 if(choice == 0) // Latin alphabet -> Morse Code
 {
