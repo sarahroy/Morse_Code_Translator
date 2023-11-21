@@ -33,13 +33,14 @@ function paste(b,c) //works!
         }
     });
 }
-function clear(i) //DOES NOT WORK
+function clear(d,e) //DOES NOT WORK
 {
     /*const textarea = document.getElementById(d);
     const butn = document.getElementById(e);
     butn.addEventListener('click', function handleClick() {
-        text.value = 'not working';
+        textarea.value = '';
     });*/
-    //document.getElementById(i).value = "";
-    document.getElementById(i).value = "b";
+    document.getElementById('english-text').value = "";
+    document.getElementById('morse-text').value = "";
+    document.execCommand('document.getElementById("morse-text").value = ""');
 }
