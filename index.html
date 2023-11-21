@@ -35,7 +35,8 @@
         <textarea oninput="main(0)" id="english-text" name="english" placeholder="Enter text here..."></textarea><br> 
         <img title = "Copy" src="./images/copy-black.png" alt="copy-black" onclick="copy('english-text')" class="icon">
         <img title = "Paste" src="./images/paste-black.png" alt="paste-black" onclick="paste('english-text','english-paste')" id = "english-paste" class="icon">
-        <img title = "Clear Text" src="./images/clear-black.png" alt="clear-black" onclick="clear('english-text')" id="english-clear"class="icon">
+        <img title = "Clear Text" src="./images/clear-black.png" alt="clear-black" onclick="clear('english-text','english-clear')" id="english-clear"class="icon">
+        <button onclick="clear('morse-text','new-btn')" id="new-btn">Clear text</button>
     </div>
     <br>
     <hr>
@@ -44,7 +45,8 @@
         <textarea oninput="main(1)" id="morse-text" name="morse" placeholder="Enter Morse Code here..."></textarea><br><br>
         <img title = "Copy" src="./images/copy-cyan.png" alt="copy-cyan" onclick="copy('morse-text')" class="icon">
         <img title = "Paste" src="./images/paste-cyan.png" alt="paste-cyan" onclick="paste('morse-text','morse-paste')" id = "morse-paste" class="icon">
-        <img title = "Clear Text" src="./images/clear-cyan.png" alt="clear-cyan" onclick="clear('morse-text')" id="morse-clear"class="icon">
+        <img title = "Clear Text" src="./images/clear-cyan.png" alt="clear-cyan" onclick="clear('morse-text','morse-clear')" id="morse-clear"class="icon">
+        <button onclick="clear('morse-text','new-btn')" id="new-btn">Clear text</button>
     </div>
     <br><br>
     <div class="bottom-part">

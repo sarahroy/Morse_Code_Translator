@@ -6,8 +6,6 @@
             : https://alexanderell.is/posts/writing-morse-code-games/ 
 * * Author: Sarah Ann Roy
 * TODO: Clear text button
-* TODO: Glossary and history
-* TODO: Make web app prettier
 **/
 *{
     margin: 0;
@@ -24,7 +22,6 @@ body {
 #app-title{
     font-size: 50px;
 }
-
 .nav-bar{
     background-color: #429edf94;
     border-bottom-left-radius: 30px;
@@ -56,7 +53,7 @@ nav ul li a{
     text-decoration: none;
 }
 nav ul li a:hover {
-    background-color: #80ebff;
+    background-color: #429edf94;
 }
 .active {
     background-color: #c0f5ff;
@@ -104,5 +101,5 @@ hr{
 .glossary-pic{
     display: block;
     margin: auto;
-    padding: 100px;
+    padding: 50px;
 }
